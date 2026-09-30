@@ -1,30 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pasteleria Mil Sabores - Contacto</title>
-<link rel="stylesheet" href="./pasteleria.css">
+    <link rel="stylesheet" href="./pasteleria.css">
 </head>
 <body>
+
+    <!-- Cabecera compartida -->
     <header id="header">
-        <h2> Contacto</h2>
-        <nav id="navbar">  
+        <h2>Contacto</h2>
+        <nav id="navbar">
             <div class="links">
                 <a href="index.html">Home</a>
                 <a href="productos.html">Productos</a>
                 <a href="nosotros.html">Nosotros</a>
                 <a href="blogs.html">Blogs</a>
                 <a href="contacto.html">Contacto</a>
-            </div> 
-                
+                <a href="admin.html" id="nav-admin" style="display:none;">Admin</a>
+            </div>
         </nav>
         <nav id="navbar">
             <div class="links">
-                <a href="carrito.html">Carrito ()</a>
-            </div>  
+                <span id="saludo-usuario" class="saludo-usuario" style="display:none;"></span>
+                <a href="registro.html" id="nav-registro">Registrarse</a>
+                <a href="login.html" id="nav-sesion">Iniciar sesión</a>
+                <a href="carrito.html">
+                    🛒Carrito (<span id="cantidad-carrito">0</span>)
+                </a>
+            </div>
         </nav>
-        
     </header>
+
+    <main>
+        <section class="contacto">
+            <h1 class="titulo-principal">Contáctanos</h1>
+            <p class="texto-formulario">Cuéntanos tu consulta. Te responderemos a la brevedad.</p>
+
+            <!-- La lógica está en contacto.js. El correo NO es obligatorio;
+                 si se llena, debe usar un dominio permitido. -->
+            <form id="form-contacto" class="formulario" novalidate>
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="100" required>
+                    <span class="error-campo" id="error-nombre"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo" maxlength="100" placeholder="correo@gmail.com">
+                    <span class="ayuda-campo">Opcional. Solo @duoc.cl, @profesor.duoc.cl o @gmail.com.</span>
+                    <span class="error-campo" id="error-correo"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="comentario">Comentario</label>
+                    <textarea id="comentario" name="comentario" maxlength="500" rows="6" required></textarea>
+                    <span class="ayuda-campo" id="contador-comentario">0 / 500</span>
+                    <span class="error-campo" id="error-comentario"></span>
+                </div>
+
+                <button type="submit" class="btn">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="./validaciones.js"></script>
+    <script src="./usuarios.js"></script>
+    <script src="./contacto.js"></script>
+    <script src="./carrito.js"></script>
 </body>
 </html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Pastelería Mil Sabores</title>
+    <link rel="stylesheet" href="./pasteleria.css">
+</head>
+<body>
+
+    <!-- Si no hay sesión de Administrador, usuarios.js redirige a login.html -->
+    <header id="header">
+        <h2>Administrador</h2>
+        <nav id="navbar">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="productos.html">Productos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="admin.html" id="nav-admin">Admin</a>
+            </div>
+        </nav>
+        <nav id="navbar">
+            <div class="links">
+                <span id="saludo-usuario" class="saludo-usuario" style="display:none;"></span>
+                <a href="registro.html" id="nav-registro">Registrarse</a>
+                <a href="login.html" id="nav-sesion">Iniciar sesión</a>
+                <a href="carrito.html">
+                    🛒Carrito (<span id="cantidad-carrito">0</span>)
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="admin-pagina">
+        <h1 class="titulo-principal">Usuarios</h1>
+        <p class="texto-formulario">Listar, crear, editar y eliminar usuarios. Mismos campos que el registro público.</p>
+
+        <!-- ============================================
+             FORMULARIO CREAR / EDITAR
+             Mismos campos que registro.html, más "tipo de usuario".
+             #run-original es un campo oculto: si tiene valor, estamos
+             EDITANDO (no creando). Así no chocamos el RUN consigo mismo.
+             ============================================ -->
+        <section class="formulario-pagina ancho">
+            <h2 id="titulo-form-usuario">Crear usuario</h2>
+
+            <form id="form-usuario-admin" class="formulario" novalidate>
+                <input type="hidden" id="run-original" value="">
+
+                <div class="fila-form">
+                    <div class="campo">
+                        <label for="run">RUN</label>
+                        <input type="text" id="run" name="run" maxlength="12" required placeholder="12.345.678-5">
+                        <span class="error-campo" id="error-run"></span>
+                    </div>
+                    <div class="campo">
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo" name="correo" maxlength="100" required>
+                        <span class="error-campo" id="error-correo"></span>
+                    </div>
+                </div>
+
+                <div class="fila-form">
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" maxlength="50" required>
+                        <span class="error-campo" id="error-nombre"></span>
+                    </div>
+                    <div class="campo">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" maxlength="100" required>
+                        <span class="error-campo" id="error-apellidos"></span>
+                    </div>
+                </div>
+
+                <div class="fila-form">
+                    <div class="campo">
+                        <label for="fechaNacimiento">Fecha de nacimiento</label>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+                    </div>
+                    <div class="campo">
+                        <label for="tipoUsuario">Tipo de usuario</label>
+                        <select id="tipoUsuario" name="tipoUsuario" required>
+                            <option value="">Selecciona un tipo</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Cliente">Cliente</option>
+                            <option value="Vendedor">Vendedor</option>
+                        </select>
+                        <span class="error-campo" id="error-tipoUsuario"></span>
+                    </div>
+                </div>
+
+                <div class="fila-form">
+                    <div class="campo">
+                        <label for="region">Región</label>
+                        <select id="region" name="region" required>
+                            <option value="">Selecciona una región</option>
+                        </select>
+                        <span class="error-campo" id="error-region"></span>
+                    </div>
+                    <div class="campo">
+                        <label for="comuna">Comuna</label>
+                        <select id="comuna" name="comuna" required>
+                            <option value="">Selecciona una comuna</option>
+                        </select>
+                        <span class="error-campo" id="error-comuna"></span>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" maxlength="300" required>
+                    <span class="error-campo" id="error-direccion"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" minlength="4" maxlength="10">
+                    <span class="ayuda-campo">Obligatoria al crear. En edición, déjala vacía para no cambiarla.</span>
+                    <span class="error-campo" id="error-password"></span>
+                </div>
+
+                <div class="acciones-form">
+                    <button type="submit" class="btn" id="btn-guardar-usuario">Crear usuario</button>
+                    <button type="button" class="btn btn-secundario" id="btn-cancelar-usuario">Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- El <tbody> se llena con JavaScript. Los botones Editar / Eliminar
+             usan data-editar y data-eliminar con el RUN de esa fila. -->
+        <section class="tabla-contenedor">
+            <h2>Listado de usuarios</h2>
+            <div class="tabla-scroll">
+                <table id="tabla-usuarios" class="tabla-admin">
+                    <thead>
+                        <tr>
+                            <th>RUN</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Tipo</th>
+                            <th>Comuna</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="./validaciones.js"></script>
+    <script src="./regiones.js"></script>
+    <script src="./usuarios.js"></script>
+    <script src="./carrito.js"></script>
+</body>
+</html>

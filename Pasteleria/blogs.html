@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pasteleria Mil Sabores - Blogs</title>
-<link rel="stylesheet" href="./pasteleria.css">
+    <link rel="stylesheet" href="./pasteleria.css">
 </head>
 <body>
+    <!-- Cabecera compartida: sesión + carrito se actualizan con JavaScript -->
     <header id="header">
-        <h2> Blogs</h2>
+        <h2>Blogs</h2>
         <nav id="navbar">  
             <div class="links">
                 <a href="index.html">Home</a>
@@ -16,15 +17,70 @@
                 <a href="nosotros.html">Nosotros</a>
                 <a href="blogs.html">Blogs</a>
                 <a href="contacto.html">Contacto</a>
+                <a href="admin.html" id="nav-admin" style="display:none;">Admin</a>
             </div> 
-                
         </nav>
         <nav id="navbar">
             <div class="links">
-                <a href="carrito.html">Carrito ()</a>
+                <span id="saludo-usuario" class="saludo-usuario" style="display:none;"></span>
+                <a href="registro.html" id="nav-registro">Registrarse</a>
+                <a href="login.html" id="nav-sesion">Iniciar sesión</a>
+                <a href="carrito.html">
+                    🛒Carrito (<span id="cantidad-carrito">0</span>)
+                </a>
             </div>  
         </nav>
-        
     </header>
+
+    <main class="blog-container">
+        <h1 class="titulo-principal">Blogs</h1>
+        <!-- Sección de Recetas Tradicionales -->
+        <section class="blog-section">
+            <h2>🍰 Recetas Tradicionales Chilenas (Fáciles de Hacer)</h2>
+
+            <article class="blog-card">
+                <h3>1. Alfajores Chilenos de Hojarasca</h3>
+                <p><strong>Descripción:</strong> Crujientes capas de hojarasca artesanal rellenadas con manjar casero espeso.</p>
+                <p><strong>Ingredientes:</strong> 2 tazas de harina, 5 yemas de huevo, 2 cucharadas de mantequilla derretida, 1 cucharada de pisco o aguardiente, manjar casero.</p>
+                <p><strong>Preparación:</strong> Mezclar la harina, las yemas, la mantequilla y el pisco hasta formar una masa suave. Urdir círculos delgados con el uslero y ahuecar con un tenedor. Hornear a 180°C durante 5 minutos hasta que se doren ligeramente. Una vez fríos, rellenar generosamente con manjar.</p>
+            </article>
+
+            <article class="blog-card">
+                <h3>2. Cucharitas de Manjar y Nuez</h3>
+                <p><strong>Descripción:</strong> Crocantes galletas redondas tradicionales chilenas horneadas a la perfección y unidas con abundante dulce de leche y nueces picadas.</p>
+                <p><strong>Ingredientes:</strong> 250g de harina, 125g de mantequilla sin sal, 3 cucharadas de azúcar flor, 1 yema, manjar y nueces picadas.</p>
+                <p><strong>Preparación:</strong> Batir la mantequilla con el azúcar flor, agregar la yema y la harina hasta formar una masa homogénea. Cortar pequeños discos y hornear a 170°C por 8-10 minutos. Rellenar de a pares con manjar y espolvorear nueces en el borde.</p>
+            </article>
+
+            <article class="blog-card">
+                <h3>3. Chilenitos de Merengue Tradicionales</h3>
+                <p><strong>Descripción:</strong> El clásico pastel de las carreteras y ferias chilenas: suave masa con relleno de manjar y cubierta de merengue horneado.</p>
+                <p><strong>Ingredientes:</strong> 2 tazas de harina, 4 yemas, 50g de mantequilla, manjar. Para el merengue: 2 claras de huevo, 1 taza de azúcar.</p>
+                <p><strong>Preparación:</strong> Preparar la masa hojaldrada, hornear los discos por 6 minutos. Rellenar con manjar. Batir las claras a punto de nieve con el azúcar, cubrir los chilenitos y dar un golpe de horno a 100°C por 10 minutos para secar el merengue.</p>
+            </article>
+        </section>
+
+        <!-- Sección de Historias y Noticias -->
+        <section class="blog-section">
+            <h2>📰 Historias y Noticias Destacadas</h2>
+
+            <article class="blog-card">
+                <h3>1. Hito Histórico: El Récord Guinness de la Torta más Grande del Mundo (1995)</h3>
+                <p class="titular"><strong>Titular:</strong> Cuando la Pastelería Mil Sabores hizo historia internacional.</p>
+                <p><strong>Contenido:</strong> En 1995, nuestro taller repostero lideró una hazaña sin precedentes al colaborar en la elaboración de la torta más grande del mundo, acreditada por el libro de Récords Guinness. Utilizando más de 20 toneladas de harina y manjar artesanal, este evento reunió a la comunidad en un hito benéfico que consolidó nuestro compromiso con la tradición y el impacto social en Chile.</p>
+                <p class="pie-nota"><em>Récord Guinness Torta más Grande del Mundo 1995.</em></p>
+            </article>
+
+            <article class="blog-card">
+                <h3>2. Vinculación con el Medio: Estudiantes de Duoc UC imparten Taller de Repostería Comunitario</h3>
+                <p class="titular"><strong>Titular:</strong> Manos que Cuidan: Estudiantes de Gastronomía enseñan repostería a mujeres de San Bernardo.</p>
+                <p><strong>Contenido:</strong> En el marco de las iniciativas de Vinculación con el Medio de Duoc UC, estudiantes de las carreras de Gastronomía lideraron un taller práctico en el que enseñaron técnicas de pastelería básica y costeo de productos a vecinas y emprendedoras locales. La jornada permitió a las participantes aprender recetas tradicionales y herramientas digitales para potenciar sus propios emprendimientos.</p>
+            </article>
+        </section>
+    </main>
+
+    <script src="./validaciones.js"></script>
+    <script src="./usuarios.js"></script>
+    <script src="./carrito.js"></script>
 </body>
 </html>
