@@ -81,47 +81,72 @@ body {
 }
 
 /* HERO */
-.hero {
+#hero {
+    width: 100%;
     min-height: 450px;
+
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 50px 20px;
+
+    gap: 60px;
+
+    padding: 50px 40px;
+
     background-color: var(--crema);
 }
 
 
+/* TEXTO DEL HERO */
 
-.hero h1 {
+.hero-texto {
+    width: 50%;
+    max-width: 600px;
+
+    text-align: left;
+}
+
+
+.hero-texto span {
+    display: block;
+
     color: var(--chocolate);
+
     font-size: 48px;
+    font-weight: bold;
+
     margin-bottom: 15px;
 }
 
-.hero p {
+
+.hero-texto p {
     color: var(--marron-oscuro);
+
     font-size: 20px;
-    max-width: 700px;
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+.hero-texto .btn {
+    display: block;
+    margin: 25px auto 0 auto;
 }
 
-#hero img.FotoMain{
-    width: 50%;
-    max-width: 600px;
+/* IMAGEN PRINCIPAL */
+
+.FotoMain {
+    width: 400px;
+    max-width: 40%;
+
     height: auto;
-    order: 2;
+
     border-radius: 10px;
-    justify-content: right;
+
+    flex-shrink: 0;
 }
 
-.hero img{
-    width: 800px;
-    
-   
-    height: auto;
-
-}
         
 /* BOTONES */
 .btn {
@@ -205,25 +230,81 @@ body {
     font-weight: bold;
 }
 
-/* NOSOTROS */
 .nosotros {
+    width: 100%;
     padding: 60px 40px;
-    background-color: var(--rosa);
-    text-align: center;
 }
 
-.nosotros h2 {
+.titulo-principal {
     color: var(--chocolate);
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.info {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nosotros-contenido {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 40px;
+
+    margin-bottom: 50px;
+}
+
+.nosotros-texto {
+    flex: 1;
+    text-align: left;
+}
+
+.nosotros-texto h2 {
+    color: var(--chocolate);
+    font-size: 30px;
     margin-bottom: 20px;
 }
 
-.nosotros p {
-    max-width: 800px;
-    margin: auto;
-    color: var(--marron-oscuro);
+.nosotros-texto h3 {
+    color: var(--chocolate);
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
-/* CONTACTO */
+.nosotros-texto p {
+    color: var(--marron-oscuro);
+    font-size: 18px;
+    line-height: 1.6;
+
+    max-width: 700px;
+}
+
+.FotoNosotros {
+    width: 300px;
+    max-width: 35%;
+    height: auto;
+
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.titulo-seccion {
+    color: var(--chocolate);
+    font-size: 32px;
+    text-align: center;
+
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+
 .contacto {
     padding: 60px 20px;
     text-align: center;
