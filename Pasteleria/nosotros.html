@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="./pasteleria.css">
 </head>
 <body>
+    <!-- Cabecera compartida: sesión + carrito se actualizan con JavaScript -->
     <header id="header">
         <h2> Nosotros</h2>
         <nav id="navbar">  
@@ -16,12 +17,18 @@
                 <a href="nosotros.html">Nosotros</a>
                 <a href="blogs.html">Blogs</a>
                 <a href="contacto.html">Contacto</a>
+                <a href="admin.html" id="nav-admin" style="display:none;">Admin</a>
             </div> 
                 
         </nav>
-        <nav id="navbar">
+         <nav id="navbar">
             <div class="links">
-                <a href="carrito.html">Carrito ()</a>
+                <span id="saludo-usuario" class="saludo-usuario" style="display:none;"></span>
+                <a href="registro.html" id="nav-registro">Registrarse</a>
+                <a href="login.html" id="nav-sesion">Iniciar sesión</a>
+                <a href="carrito.html">
+                    🛒Carrito (<span id="cantidad-carrito">0</span>)
+                </a>
             </div>  
         </nav>
         
@@ -253,8 +260,8 @@
     </section>
 
 </main>
-    </main>
-
-    
+    <script src="./validaciones.js"></script>
+    <script src="./usuarios.js"></script>
+    <script src="./carrito.js"></script>
 </body>
 </html>

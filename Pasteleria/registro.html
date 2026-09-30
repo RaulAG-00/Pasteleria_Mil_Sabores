@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Pastelería Mil Sabores</title>
+    <link rel="stylesheet" href="./pasteleria.css">
+</head>
+<body>
+
+    <!-- Cabecera compartida. usuarios.js cambia Iniciar sesión / Cerrar sesión. -->
+    <header id="header">
+        <h2>Pastelería Mil Sabores</h2>
+        <nav id="navbar">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="productos.html">Productos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="admin.html" id="nav-admin" style="display:none;">Admin</a>
+            </div>
+        </nav>
+        <nav id="navbar">
+            <div class="links">
+                <span id="saludo-usuario" class="saludo-usuario" style="display:none;"></span>
+                <a href="registro.html" id="nav-registro">Registrarse</a>
+                <a href="login.html" id="nav-sesion">Iniciar sesión</a>
+                <a href="carrito.html">
+                    🛒Carrito (<span id="cantidad-carrito">0</span>)
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="formulario-pagina ancho">
+        <h1 class="titulo-principal">Crear cuenta</h1>
+        <p class="texto-formulario">
+            El registro usa los mismos datos que crear un usuario en el administrador.
+            Las cuentas nuevas se guardan como tipo Cliente.
+        </p>
+
+        <!-- ============================================
+             FORMULARIO DE REGISTRO
+             Los id (run, correo, nombre...) DEBEN coincidir con
+             los que lee usuarios.js. Cada span#error-... muestra
+             el mensaje si esa validación falla.
+             ============================================ -->
+        <form id="form-registro" class="formulario" novalidate>
+
+            <!-- RUN chileno + correo con dominios permitidos -->
+            <div class="fila-form">
+                <div class="campo">
+                    <label for="run">RUN</label>
+                    <input type="text" id="run" name="run" maxlength="12" required placeholder="12.345.678-5">
+                    <span class="error-campo" id="error-run"></span>
+                </div>
+                <div class="campo">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo" maxlength="100" required placeholder="correo@gmail.com">
+                    <span class="error-campo" id="error-correo"></span>
+                </div>
+            </div>
+
+            <!-- Nombre máx 50 / Apellidos máx 100 -->
+            <div class="fila-form">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="50" required>
+                    <span class="error-campo" id="error-nombre"></span>
+                </div>
+                <div class="campo">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" maxlength="100" required>
+                    <span class="error-campo" id="error-apellidos"></span>
+                </div>
+            </div>
+
+            <!-- Opcional. Si la persona tiene 50 años o más, el carrito aplica FELICES50. -->
+            <div class="campo">
+                <label for="fechaNacimiento">Fecha de nacimiento (opcional)</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+                <span class="ayuda-campo">Si tienes 50 años o más se aplica el descuento FELICES50.</span>
+            </div>
+
+            <!-- regiones.js llena estos select. Al cambiar región, cambian las comunas. -->
+            <div class="fila-form">
+                <div class="campo">
+                    <label for="region">Región</label>
+                    <select id="region" name="region" required>
+                        <option value="">Selecciona una región</option>
+                    </select>
+                    <span class="error-campo" id="error-region"></span>
+                </div>
+                <div class="campo">
+                    <label for="comuna">Comuna</label>
+                    <select id="comuna" name="comuna" required>
+                        <option value="">Selecciona una comuna</option>
+                    </select>
+                    <span class="error-campo" id="error-comuna"></span>
+                </div>
+            </div>
+
+            <!-- Dirección máx 300 -->
+            <div class="campo">
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" name="direccion" maxlength="300" required>
+                <span class="error-campo" id="error-direccion"></span>
+            </div>
+
+            <!-- Contraseña 4 a 10 caracteres -->
+            <div class="campo">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" minlength="4" maxlength="10" required>
+                <span class="error-campo" id="error-password"></span>
+            </div>
+
+            <button type="submit" class="btn">Registrarme</button>
+        </form>
+
+        <p class="texto-formulario">
+            ¿Ya tienes cuenta?
+            <a href="login.html">Inicia sesión</a>
+        </p>
+    </main>
+
+    <script src="./validaciones.js"></script>
+    <script src="./regiones.js"></script>
+    <script src="./usuarios.js"></script>
+    <script src="./carrito.js"></script>
+</body>
+</html>
