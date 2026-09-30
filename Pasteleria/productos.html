@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +8,465 @@
 </head>
 <body>
     <header id="header">
-        <h2> Productos</h2>
-        <nav id="navbar">  
+        <h2>Productos</h2>
+        <nav id="navbar">
             <div class="links">
                 <a href="index.html">Home</a>
                 <a href="productos.html">Productos</a>
                 <a href="nosotros.html">Nosotros</a>
                 <a href="blogs.html">Blogs</a>
                 <a href="contacto.html">Contacto</a>
-            </div> 
-                
+                <a href="admin.html" id="nav-admin" style="display:none;">Admin</a>
+            </div>
         </nav>
         <nav id="navbar">
             <div class="links">
-                <a href="carrito.html">Carrito ()</a>
-            </div>  
+                <span id="saludo-usuario" class="saludo-usuario" style="display:none;"></span>
+                <a href="registro.html" id="nav-registro">Registrarse</a>
+                <a href="login.html" id="nav-sesion">Iniciar sesión</a>
+                <a href="carrito.html">
+                    🛒Carrito (<span id="cantidad-carrito">0</span>)
+                </a>
+            </div>
         </nav>
-        
     </header>
+   <main>
+
+    <section class="productos">
+
+        <h1 class="titulo-principal">Nuestros Productos</h1>
+
+
+        <!-- =====================================
+             TORTAS CUADRADAS
+             ===================================== -->
+
+        <section class="categoria-productos">
+
+            <h2>Tortas Cuadradas</h2>
+
+            <div class="productos-container">
+
+                <div class="producto">
+
+                    <img
+                        src="./images/torta_cuadrada_chocolate.jpg"
+                        alt="Torta Cuadrada de Chocolate"
+                    >
+
+                    <h3>Torta Cuadrada de Chocolate</h3>
+
+                    <span class="codigo">TC001</span>
+
+                    <span class="precio">$45.000 CLP</span>
+                    <button class="btn btn-agregar">
+                         Agregar al carrito
+                     </button>
+                </div>
+
+
+                <div class="producto">
+
+                    <img
+                        src="./images/torta_cuadrada_frutas.jpg"
+                        alt="Torta Cuadrada de Frutas"
+                    >
+
+                    <h3>Torta Cuadrada de Frutas</h3>
+
+                    <span class="codigo">TC002</span>
+
+                    <span class="precio">$50.000 CLP</span>
+                    
+                    <button class="btn btn-agregar">
+                         Agregar al carrito
+                     </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             TORTAS CIRCULARES
+             ===================================== -->
+
+        <section class="categoria-productos">
+
+            <h2>Tortas Circulares</h2>
+
+            <div class="productos-container">
+
+                <div class="producto">
+
+                    <img
+                        src="./images/torta_circular_vainilla.jpg"
+                        alt="Torta Circular de Vainilla"
+                    >
+
+                    <h3>Torta Circular de Vainilla</h3>
+
+                    <span class="codigo">TT001</span>
+
+                    <span class="precio">$40.000 CLP</span>
+
+                     <button class="btn btn-agregar">
+                        Agregar al carrito
+                    </button>
+
+                </div>
+
+
+                <div class="producto">
+
+                    <img
+                        src="./images/Torta_Circular_manjar.jpg"
+                        alt="Torta Circular de Manjar"
+                    >
+
+                    <h3>Torta Circular de Manjar</h3>
+
+                    <span class="codigo">TT002</span>
+
+                    <span class="precio">$42.000 CLP</span>
+
+                    <button class="btn btn-agregar">
+                         Agregar al carrito
+                     </button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             POSTRES INDIVIDUALES
+             ===================================== -->
+
+        <section class="categoria-productos">
+
+            <h2>Postres Individuales</h2>
+
+            <div class="productos-container">
+
+                <div class="producto">
+
+                    <img
+                        src="./images/mousse_chocolate.jpg"
+                        alt="Mousse de Chocolate"
+                    >
+
+                    <h3>Mousse de Chocolate</h3>
+
+                    <span class="codigo">PI001</span>
+
+                    <span class="precio">$5.000 CLP</span>
+
+                    <button class="btn btn-agregar">
+                         Agregar al carrito
+                     </button>
+                </div>
+
+
+                <div class="producto">
+
+                    <img
+                        src="./images/Tiramisú_Clásico.jpg"
+                        alt="Tiramisú Clásico"
+                    >
+
+                    <h3>Tiramisú Clásico</h3>
+
+                    <span class="codigo">PI002</span>
+
+                    <span class="precio">$5.500 CLP</span>
+
+                    <button class="btn btn-agregar">
+                         Agregar al carrito
+                     </button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PRODUCTOS SIN AZÚCAR
+             ===================================== -->
+
+        <section class="categoria-productos">
+
+            <h2>Productos Sin Azúcar</h2>
+
+            <div class="productos-container">
+
+                <div class="producto">
+
+                    <img
+                        src="./images/Torta_SinAzúcar_Naranja.jpg"
+                        alt="Torta Sin Azúcar de Naranja"
+                    >
+
+                    <h3>Torta Sin Azúcar de Naranja</h3>
+
+                    <span class="codigo">PSA001</span>
+
+                    <span class="precio">$48.000 CLP</span>
+
+                    <button class="btn btn-agregar">
+                         Agregar al carrito
+                     </button>
+                </div>
+
+
+                <div class="producto">
+
+                    <img
+                        src="./images/Cheesecake_SinAzúcar.jpg"
+                        alt="Cheesecake Sin Azúcar"
+                    >
+
+                    <h3>Cheesecake Sin Azúcar</h3>
+
+                    <span class="codigo">PSA002</span>
+
+                    <span class="precio">$47.000 CLP</span>
+
+                    <button class="btn btn-agregar">
+                         Agregar al carrito
+                     </button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PASTELERÍA TRADICIONAL
+             ===================================== -->
+
+        <section class="categoria-productos">
+
+            <h2>Pastelería Tradicional</h2>
+
+            <div class="productos-container">
+
+                <div class="producto">
+
+                    <img
+                        src="./images/Empanada_manzana.jpg"
+                        alt="Empanada de Manzana"
+                    >
+
+                    <h3>Empanada de Manzana</h3>
+
+                    <span class="codigo">PT001</span>
+
+                    <span class="precio">$3.000 CLP</span>
+
+                    <button class="btn btn-agregar">
+                         Agregar al carrito
+                     </button>
+                </div>
+
+
+                <div class="producto">
+
+                    <img
+                        src="./images/Tarta_Santiago.jpg"
+                        alt="Tarta de Santiago"
+                    >
+
+                    <h3>Tarta de Santiago</h3>
+
+                    <span class="codigo">PT002</span>
+
+                    <span class="precio">$6.000 CLP</span>
+
+                    <button class="btn btn-agregar">
+                         Agregar al carrito
+                     </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PRODUCTOS SIN GLUTEN
+             ===================================== -->
+
+        <section class="categoria-productos">
+
+            <h2>Productos Sin Gluten</h2>
+
+            <div class="productos-container">
+
+                <div class="producto">
+
+                    <img
+                        src="./images/Brownie_Gluten_free.jpg"
+                        alt="Brownie Sin Gluten"
+                    >
+
+                    <h3>Brownie Sin Gluten</h3>
+
+                    <span class="codigo">PG001</span>
+
+                    <span class="precio">$4.000 CLP</span>
+
+                    <button class="btn btn-agregar">
+                         Agregar al carrito
+                     </button>
+
+                </div>
+
+
+                <div class="producto">
+
+                    <img
+                        src="./images/Pan_Gluten_free.jpg"
+                        alt="Pan Sin Gluten"
+                    >
+
+                    <h3>Pan Sin Gluten</h3>
+
+                    <span class="codigo">PG002</span>
+
+                    <span class="precio">$3.500 CLP</span>
+                   
+                    <button class="btn btn-agregar">
+                         Agregar al carrito
+                     </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PRODUCTOS VEGANOS
+             ===================================== -->
+
+        <section class="categoria-productos">
+
+            <h2>Productos Veganos</h2>
+
+            <div class="productos-container">
+
+                <div class="producto">
+
+                    <img
+                        src="./images/Torta_Chocolate_Vegana.jpg"
+                        alt="Torta Vegana de Chocolate"
+                    >
+
+                    <h3>Torta Vegana de Chocolate</h3>
+
+                    <span class="codigo">PV001</span>
+
+                    <span class="precio">$50.000 CLP</span>
+
+                    <button class="btn btn-agregar">
+                         Agregar al carrito
+                     </button>
+
+                </div>
+
+
+                <div class="producto">
+
+                    <img
+                        src="./images/Galletas_Avena_vegana.jpg"
+                        alt="Galletas Veganas de Avena"
+                    >
+
+                    <h3>Galletas Veganas de Avena</h3>
+
+                    <span class="codigo">PV002</span>
+
+                    <span class="precio">$4.500 CLP</span>
+                   
+                    <button class="btn btn-agregar">
+                         Agregar al carrito
+                     </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             TORTAS ESPECIALES
+             ===================================== -->
+
+        <section class="categoria-productos">
+
+            <h2>Tortas Especiales</h2>
+
+            <div class="productos-container">
+
+                <div class="producto">
+
+                    <img
+                        src="./images/Torta_Especial_Cumpleaños.jpg"
+                        alt="Torta Especial de Cumpleaños"
+                    >
+
+                    <h3>Torta Especial de Cumpleaños</h3>
+
+                    <span class="codigo">TE001</span>
+
+                    <span class="precio">$55.000 CLP</span>
+
+                    <button class="btn btn-agregar">
+                        Agregar al carrito
+                    </button>
+                </div>
+
+
+                <div class="producto">
+
+                    <img
+                        src="./images/Torta_Especial_Boda.jpg"
+                        alt="Torta Especial de Boda"
+                    >
+
+                    <h3>Torta Especial de Boda</h3>
+
+                    <span class="codigo">TE002</span>
+
+                    <span class="precio">$60.000 CLP</span>
+                    
+                    <button class="btn btn-agregar">
+                        Agregar al carrito
+                    </button>
+                    
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+<script src="./carrito.js"></script>
+
+    <script src="./validaciones.js"></script>
+    <script src="./productos.js"></script>
+    <script src="./usuarios.js"></script>
 </body>
 </html>
