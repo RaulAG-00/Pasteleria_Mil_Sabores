@@ -1,0 +1,299 @@
+/* =========================================
+   PALETA DE COLORES - PASTELERÍA
+   ========================================= */
+
+:root {
+    --crema: #FFF5E1;
+    --rosa: #FFC0CB;
+    --chocolate: #8B4513;
+    --marron-oscuro: #5D4037;
+    --gris-claro: #B0BEC5;
+    --blanco: #FFFFFF;
+}
+
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--crema);
+    color: var(--marron-oscuro);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* HEADER */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--rosa);
+    color: var(--marron-oscuro);
+}
+ 
+#header h1 {
+    color: var(--chocolate);
+    font-size: 32px;
+}
+
+#header .contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* NAVBAR */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: transparent;
+    border-bottom: 3px solid var(--rosa);
+}
+
+#navbar .logo h4 {
+    color: var(--chocolate);
+    font-size: 24px;
+}
+
+#navbar .links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#navbar .links a {
+    color: var(--marron-oscuro);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#navbar .links a:hover {
+    color: var(--chocolate);
+}
+
+/* HERO */
+.hero {
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--crema);
+}
+
+.hero h1 {
+    color: var(--chocolate);
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: var(--marron-oscuro);
+    font-size: 20px;
+    max-width: 700px;
+}
+
+.hero img{
+    width: 800px;
+   
+    height: auto;
+
+}
+        
+/* BOTONES */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: var(--chocolate);
+    color: var(--blanco);
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+.btn:hover {
+    background-color: var(--rosa);
+    color: var(--marron-oscuro);
+}
+
+/* PRODUCTOS */
+.productos {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.productos h2 {
+    color: var(--chocolate);
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.productos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* TARJETAS */
+.producto {
+    width: 280px;
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(93, 64, 55, 0.15);
+    transition: 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(93, 64, 55, 0.25);
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.producto h3 {
+    color: var(--chocolate);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    color: var(--marron-oscuro);
+}
+
+.producto .precio {
+    display: block;
+    margin-top: 15px;
+    color: var(--chocolate);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* NOSOTROS */
+.nosotros {
+    padding: 60px 40px;
+    background-color: var(--rosa);
+    text-align: center;
+}
+
+.nosotros h2 {
+    color: var(--chocolate);
+    margin-bottom: 20px;
+}
+
+.nosotros p {
+    max-width: 800px;
+    margin: auto;
+    color: var(--marron-oscuro);
+}
+
+/* CONTACTO */
+.contacto {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contacto h2 {
+    color: var(--chocolate);
+    margin-bottom: 30px;
+}
+
+.contacto form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gris-claro);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.contacto input:focus,
+.contacto textarea:focus {
+    outline: none;
+    border-color: var(--rosa);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--chocolate);
+    color: var(--crema);
+    padding: 30px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: var(--rosa);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.texto-secundario {
+    color: var(--gris-claro);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    #navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #navbar .links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .productos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
