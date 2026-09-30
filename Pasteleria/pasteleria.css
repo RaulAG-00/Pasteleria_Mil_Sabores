@@ -11,6 +11,7 @@
     --blanco: #FFFFFF;
 }
 
+
 /* ESTILOS GENERALES */
 * {
     margin: 0;
@@ -83,13 +84,15 @@ body {
 .hero {
     min-height: 450px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     text-align: center;
     padding: 50px 20px;
     background-color: var(--crema);
 }
+
+
 
 .hero h1 {
     color: var(--chocolate);
@@ -103,8 +106,18 @@ body {
     max-width: 700px;
 }
 
+#hero img.FotoMain{
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    order: 2;
+    border-radius: 10px;
+    justify-content: right;
+}
+
 .hero img{
     width: 800px;
+    
    
     height: auto;
 
