@@ -648,16 +648,48 @@ body {
 
 
 /* =========================================================
-   13. BLOG - INDEX
+   BLOG
    ========================================================= */
 
-.blog-inicio {
+
+/* PÁGINA COMPLETA DEL BLOG */
+
+.blogs {
     width: 100%;
-
-    padding: 70px 40px;
-
-    background-color: var(--crema);
+    padding: 60px 40px;
 }
+
+
+/* TÍTULO PRINCIPAL "BLOGS" */
+
+.blogs .titulo-principal {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+/* CADA SECCIÓN DEL BLOG */
+
+.blog-section {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto 70px auto;
+}
+
+
+/* TÍTULO DE CADA SECCIÓN */
+
+.blog-section h2 {
+    text-align: center;
+
+    color: var(--chocolate);
+
+    margin-bottom: 40px;
+}
+
+
+/* CONTENEDOR DE LAS TARJETAS */
 
 .blog-container {
     width: 100%;
@@ -666,12 +698,21 @@ body {
     margin: 0 auto;
 
     display: flex;
+    flex-wrap: wrap;
 
-    gap: 30px;
+    /* Separación horizontal */
+    column-gap: 40px;
+
+    /* Separación vertical */
+    row-gap: 60px;
 }
 
+
+/* TARJETA DEL BLOG */
+
 .blog-card {
-    flex: 1;
+    /* Dos tarjetas por fila */
+    flex: 0 0 calc(50% - 20px);
 
     background-color: var(--blanco);
 
@@ -680,33 +721,76 @@ body {
     overflow: hidden;
 
     box-shadow: 0 4px 10px rgba(93, 64, 55, 0.15);
+
+    transition: 0.3s;
 }
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.blog-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 18px rgba(93, 64, 55, 0.25);
+}
+
+
+/* IMAGEN DEL BLOG */
 
 .blog-card img {
     width: 100%;
-    height: 220px;
+    height: 250px;
 
     object-fit: cover;
 }
 
+
+/* CONTENIDO DE LA TARJETA */
+
 .blog-texto {
-    padding: 25px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
 }
+
+
+/* TÍTULO DE LA TARJETA */
 
 .blog-texto h3 {
     color: var(--chocolate);
 
-    font-size: 22px;
+    font-family: 'Lato', sans-serif;
 
-    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+
+    margin: 0;
 }
+
+
+/* TEXTO DE LA TARJETA */
 
 .blog-texto p {
     color: var(--marron-oscuro);
 
-    margin-bottom: 15px;
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin: 0;
 }
 
+
+/* BOTÓN */
+
+.blog-texto .btn {
+    width: fit-content;
+
+    margin-top: 10px;
+}
 
 /* =========================================================
    14. CONTACTO
