@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,13 @@
 <link rel="stylesheet" href="./pasteleria.css">
 </head>
 <body>
-    <header id="header">
+    
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+     <header id="header">
         <h2> Pastelería Mil Sabores</h2>
         <nav id="navbar">  
             <div class="links">
@@ -16,38 +22,475 @@
                 <a href="nosotros.html">Nosotros</a>
                 <a href="blogs.html">Blogs</a>
                 <a href="contacto.html">Contacto</a>
+                <a href="admin.html" id="nav-admin" style="display:none;">Admin</a>
             </div> 
                 
         </nav>
         <nav id="navbar">
             <div class="links">
-                <a href="carrito.html">Carrito ()</a>
+                <span id="saludo-usuario" class="saludo-usuario" style="display:none;"></span>
+                <a href="registro.html" id="nav-registro">Registrarse</a>
+                <a href="login.html" id="nav-sesion">Iniciar sesión</a>
+                <a href="carrito.html">
+                    🛒Carrito (<span id="cantidad-carrito">0</span>)
+                </a>
             </div>  
         </nav>
         
     </header>
+
+
+    <!-- =========================================
+         MAIN
+         ========================================= -->
+
     <main>
-        <section class="container" id="hero">
-            
-            <div class="info">
 
-                <span>Pasteleria</span>
-                <p>Somos una tienda que vende dulces y pasteles, y la Dani ya no anda con la maña</p>
 
-            <div class="action">
+        <!-- =====================================
+             HERO
+             ===================================== -->
 
-             <button type="button" class="btn">Catalogo</button>
+        <section id="hero">
+
+            <div class="hero-texto">
+
+                <span>
+                    ¡50 AÑOS DE DULZURA EN CHILE!
+                </span>
+
+                <p>
+                    Tortas artesanales hechas con
+                    ingredientes locales y recetas
+                    de tradición.
+                </p>
+
+                <a
+                    href="productos.html"
+                    class="btn"
+                >
+                    🛒 Ver Catálogo Completo
+                </a>
 
             </div>
 
-            
+
+            <img
+                class="FotoMain"
+                src="./images/categorias_tortas.jpg"
+                alt="Torta artesanal Pastelería Mil Sabores"
+            >
+
+        </section>
+
+
+        <!-- =====================================
+             CATEGORÍAS
+             ===================================== -->
+
+        <section class="categorias">
+
+            <h2 class="titulo-principal">
+                Explora por Categorías
+            </h2>
+
+
+            <div class="categorias-container">
+
+                <a href="productos.html#tortas-cuadradas"
+                   class="categoria">
+
+                    <span>🎂</span>
+
+                    <h3>
+                        Tortas Cuadradas
+                    </h3>
+
+                </a>
+
+
+                <a href="productos.html#tortas-circulares"
+                   class="categoria">
+
+                    <span>🍰</span>
+
+                    <h3>
+                        Tortas Circulares
+                    </h3>
+
+                </a>
+
+
+                <a href="productos.html#individuales"
+                   class="categoria">
+
+                    <span>🧁</span>
+
+                    <h3>
+                        Individuales
+                    </h3>
+
+                </a>
+
+
+                <a href="productos.html#sin-azucar"
+                   class="categoria">
+
+                    <span>🍊</span>
+
+                    <h3>
+                        Sin Azúcar
+                    </h3>
+
+                </a>
+
+
+                <a href="productos.html#tradicional"
+                   class="categoria">
+
+                    <span>🥧</span>
+
+                    <h3>
+                        Tradicional
+                    </h3>
+
+                </a>
+
+
+                <a href="productos.html#sin-gluten"
+                   class="categoria">
+
+                    <span>🌾</span>
+
+                    <h3>
+                        Sin Gluten
+                    </h3>
+
+                </a>
+
+
+                <a href="productos.html#vegana"
+                   class="categoria">
+
+                    <span>🌱</span>
+
+                    <h3>
+                        Vegana
+                    </h3>
+
+                </a>
+
+
+                <a href="productos.html#especiales"
+                   class="categoria">
+
+                    <span>🎉</span>
+
+                    <h3>
+                        Especiales
+                    </h3>
+
+                </a>
 
             </div>
-            <img class="FotoMain" src="./images/categorias_tortas.jpg" alt="Foto Categorias">
 
-   </section>
+        </section>
+
+
+        <!-- =====================================
+             PRODUCTOS DESTACADOS
+             ===================================== -->
+
+        <section class="productos destacados">
+
+            <h2 class="titulo-principal">
+                Nuestros Productos Destacados
+            </h2>
+
+
+            <div class="productos-container">
+
+
+                <!-- TORTA MANJAR -->
+
+                <div class="producto">
+
+                    <img
+                        src="./images/Torta_Circular_manjar.jpg"
+                        alt="Torta Circular de Manjar"
+                    >
+
+                    <h3>
+                        Torta Circular de Manjar
+                    </h3>
+
+                    <span class="codigo">
+                        TT002
+                    </span>
+
+                    <span class="precio">
+                        $42.000 CLP
+                    </span>
+
+                    <button class="btn btn-agregar">
+                        Añadir al 🛒
+                    </button>
+
+                </div>
+
+
+                <!-- TIRAMISÚ -->
+
+                <div class="producto">
+
+                    <img
+                        src="./images/Tiramisú_Clásico.jpg"
+                        alt="Tiramisú Clásico"
+                    >
+
+                    <h3>
+                        Tiramisú Clásico
+                    </h3>
+
+                    <span class="codigo">
+                        PI002
+                    </span>
+
+                    <span class="precio">
+                        $5.500 CLP
+                    </span>
+
+                    <button class="btn btn-agregar">
+                        Añadir al 🛒
+                    </button>
+
+                </div>
+
+
+                <!-- CHEESECAKE -->
+
+                <div class="producto">
+
+                    <img
+                        src="./images/Cheesecake_SinAzúcar.jpg"
+                        alt="Cheesecake Sin Azúcar"
+                    >
+
+                    <h3>
+                        Cheesecake Sin Azúcar
+                    </h3>
+
+                    <span class="codigo">
+                        PSA002
+                    </span>
+
+                    <span class="precio">
+                        $47.000 CLP
+                    </span>
+
+                    <button class="btn btn-agregar">
+                        Añadir al 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PROMOCIONES
+             ===================================== -->
+
+        <section class="promociones">
+
+            <div class="promocion">
+
+                <span class="promocion-icono">
+                    🎁
+                </span>
+
+                <div>
+
+                    <h2>
+                        Celebra nuestro 50° aniversario
+                    </h2>
+
+                    <p>
+                        Ingresa el código
+                        <strong>FELICES50</strong>
+                        y obtén un 10% de descuento.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="promocion">
+
+                <span class="promocion-icono">
+                    👵
+                </span>
+
+                <div>
+
+                    <h2>
+                        Beneficio especial
+                    </h2>
+
+                    <p>
+                        50% de descuento en todas las
+                        compras para mayores de 50 años.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             BLOG
+             ===================================== -->
+
+        <section class="blog-inicio">
+
+            <h2 class="titulo-principal">
+                Historias & Blog
+            </h2>
+
+
+            <div class="blog-container">
+
+
+                <article class="blog-card">
+
+                    <img
+                        src="./images/historia.jpg"
+                        alt="Historia Pastelería Mil Sabores"
+                    >
+
+                    <div class="blog-texto">
+
+                        <h3>
+                            El Récord Guinness de 1995
+                        </h3>
+
+                        <p>
+                            Conoce uno de los momentos
+                            más importantes de nuestra
+                            historia y cómo participamos
+                            en la creación de la torta
+                            más grande del mundo.
+                        </p>
+
+                        <a
+                            href="blogs.html"
+                            class="btn"
+                        >
+                            Leer más
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="blog-card">
+
+                    <img
+                        src="./images/Tarta_Santiago.jpg"
+                        alt="Recetas tradicionales"
+                    >
+
+                    <div class="blog-texto">
+
+                        <h3>
+                            Tradición y nuevas generaciones
+                        </h3>
+
+                        <p>
+                            Descubre cómo las recetas
+                            tradicionales siguen formando
+                            parte de nuestra pastelería.
+                        </p>
+
+                        <a
+                            href="blogs.html"
+                            class="btn"
+                        >
+                            Leer más
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
 
     </main>
-    
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer>
+
+        <div class="newsletter">
+
+            <h3>
+                Suscríbete al Newsletter
+            </h3>
+
+            <form>
+
+                <input
+                    type="email"
+                    placeholder="Ingresa tu correo"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="btn"
+                >
+                    Suscribirme
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="footer-info">
+
+            <p>
+                Redes Sociales
+                |
+                Instagram
+                |
+                Facebook
+            </p>
+
+            <p>
+                Todos los derechos reservados -
+                Pastelería Mil Sabores © 2026
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="./carrito.js"></script>
+
+
+    <script src="./validaciones.js"></script>
+    <script src="./usuarios.js"></script>
 </body>
 </html>

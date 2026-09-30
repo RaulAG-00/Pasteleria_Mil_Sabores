@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="./pasteleria.css">
 </head>
 <body>
+    <!-- Cabecera compartida: sesión + carrito se actualizan con JavaScript -->
     <header id="header">
         <h2> Nosotros</h2>
         <nav id="navbar">  
@@ -16,47 +17,251 @@
                 <a href="nosotros.html">Nosotros</a>
                 <a href="blogs.html">Blogs</a>
                 <a href="contacto.html">Contacto</a>
+                <a href="admin.html" id="nav-admin" style="display:none;">Admin</a>
             </div> 
                 
         </nav>
-        <nav id="navbar">
+         <nav id="navbar">
             <div class="links">
-                <a href="carrito.html">Carrito ()</a>
+                <span id="saludo-usuario" class="saludo-usuario" style="display:none;"></span>
+                <a href="registro.html" id="nav-registro">Registrarse</a>
+                <a href="login.html" id="nav-sesion">Iniciar sesión</a>
+                <a href="carrito.html">
+                    🛒Carrito (<span id="cantidad-carrito">0</span>)
+                </a>
             </div>  
         </nav>
         
     </header>
     <main>
-         <section class="container" id="hero">
-            
-            <div class="info">
+      <main>
 
-                <h1>Pasteleria Mil Sabores</h1>
-                <h2>Historia y Record Guinness</h2>
-                <p>"Desde hace 50 años, Pastelería 1000 Sabores ha sido parte del corazón de la repostería chilena. Un hito imborrable en nuestra historia ocurrió en 1995, cuando colaboramos con orgullo en la creación de la torta más grande del mundo, hito reconocido en el Récord Guinness. Esta pasión por los desafíos dulces y por compartir con la comunidad sigue viva en cada receta que elaboramos día a día."</p>
-                <img class="FotoMain" src="./images/historia.jpg" alt="Hisoria">
-                <h2>Origen de productos y recetas tradicionales</h2>
-                <p>Torta Circular de Manjar y Nueces: Elaborada siguiendo la auténtica receta artesanal chilena, utilizando manjar casero cocinado a fuego lento y nueces seleccionadas de la zona central.</p>
-                <img class="FotoMain" src="./images/Torta_Circular_manjar.jpg" alt="Torta Manjar">
-                <p>Tarta de Santiago: Inspirada en la repostería tradicional española, elaborada a base de almendras molidas, huevos y azúcar, coronada con la emblemática Cruz de Santiago en azúcar flor.</p>
-                <img class="FotoMain" src="./images/Tarta_Santiago.jpg" alt="Tarta Santiago">
-                <p>Empanada de Manzana Speciada: Receta clásica de la repostería criolla chilena que combina manzanas horneadas con toques de canela y una masa suave y hojaldrada.</p>
-                <img class="FotoMain" src="./images/Empanada_manzana.jpg" alt="Empanada Manzana">
-                <p>Líneas Dietéticas y Especiales (Sin Azúcar, Sin Gluten y Vegana): Adaptaciones modernas de nuestras recetas de antaño que sustituyen ingredientes sin perder la textura esponjosa y el sabor característico de 50 años de tradición.</p>
-                <img class="FotoMain" src="./images/Cheesecake_SinAzúcar.jpg" alt="Cheesecake">
-                <h2>Misión y Visión</h2>
-                <p>Misión: Ofrecer una experiencia dulce y memorable a nuestros clientes, proporcionando tortas y productos de repostería de alta calidad para todas las ocasiones, mientras celebramos nuestras raíces históricas y fomentamos la creatividad en la repostería.</p>
-                <p>Convertirnos en la tienda online líder de productos de repostería en Chile, conocida por nuestra innovación, calidad y el impacto positivo en la comunidad, especialmente en la formación de nuevos talentos en gastronomía.</p>
-                <img class="FotoMain" src="./images/misión_visión.jpg" alt="Mision">
+    <!-- CONTENEDOR PRINCIPAL DE NOSOTROS -->
+    <section class="nosotros">
 
-            
+        <!-- TÍTULO PRINCIPAL -->
+        <h1 class="titulo-principal">
+            Pastelería Mil Sabores
+        </h1>
 
-            </div>
-            
 
-   </section>
-    </main>
+        <!-- CONTENEDOR DE TODA LA INFORMACIÓN -->
+        <div class="info">
 
-    
+
+            <!-- =====================================
+                 HISTORIA
+                 ===================================== -->
+
+            <section class="nosotros-contenido">
+
+                <div class="nosotros-texto">
+
+                    <h2>Historia y Récord Guinness</h2>
+
+                    <p>
+                        Desde hace 50 años, Pastelería 1000 Sabores ha sido
+                        parte del corazón de la repostería chilena. Un hito
+                        imborrable en nuestra historia ocurrió en 1995,
+                        cuando colaboramos con orgullo en la creación de la
+                        torta más grande del mundo, hito reconocido en el
+                        Récord Guinness. Esta pasión por los desafíos dulces
+                        y por compartir con la comunidad sigue viva en cada
+                        receta que elaboramos día a día.
+                    </p>
+
+                </div>
+
+                <img
+                    class="FotoNosotros"
+                    src="./images/historia.jpg"
+                    alt="Historia de Pastelería Mil Sabores"
+                >
+
+            </section>
+
+
+            <!-- =====================================
+                 TÍTULO RECETAS
+                 ===================================== -->
+
+            <h2 class="titulo-seccion">
+                Origen de productos y recetas tradicionales
+            </h2>
+
+
+            <!-- =====================================
+                 TORTA MANJAR
+                 ===================================== -->
+
+            <section class="nosotros-contenido">
+
+                <div class="nosotros-texto">
+
+                    <h3>
+                        Torta Circular de Manjar y Nueces
+                    </h3>
+
+                    <p>
+                        Elaborada siguiendo la auténtica receta artesanal
+                        chilena, utilizando manjar casero cocinado a fuego
+                        lento y nueces seleccionadas de la zona central.
+                    </p>
+
+                </div>
+
+                <img
+                    class="FotoNosotros"
+                    src="./images/Torta_Circular_manjar.jpg"
+                    alt="Torta Circular de Manjar y Nueces"
+                >
+
+            </section>
+
+
+            <!-- =====================================
+                 TARTA SANTIAGO
+                 ===================================== -->
+
+            <section class="nosotros-contenido">
+
+                <div class="nosotros-texto">
+
+                    <h3>Tarta de Santiago</h3>
+
+                    <p>
+                        Inspirada en la repostería tradicional española,
+                        elaborada a base de almendras molidas, huevos y
+                        azúcar, coronada con la emblemática Cruz de Santiago
+                        en azúcar flor.
+                    </p>
+
+                </div>
+
+                <img
+                    class="FotoNosotros"
+                    src="./images/Tarta_Santiago.jpg"
+                    alt="Tarta de Santiago"
+                >
+
+            </section>
+
+
+            <!-- =====================================
+                 EMPANADA DE MANZANA
+                 ===================================== -->
+
+            <section class="nosotros-contenido">
+
+                <div class="nosotros-texto">
+
+                    <h3>
+                        Empanada de Manzana Especiada
+                    </h3>
+
+                    <p>
+                        Receta clásica de la repostería criolla chilena que
+                        combina manzanas horneadas con toques de canela y
+                        una masa suave y hojaldrada.
+                    </p>
+
+                </div>
+
+                <img
+                    class="FotoNosotros"
+                    src="./images/Empanada_manzana.jpg"
+                    alt="Empanada de Manzana Especiada"
+                >
+
+            </section>
+
+
+            <!-- =====================================
+                 PRODUCTOS ESPECIALES
+                 ===================================== -->
+
+            <section class="nosotros-contenido">
+
+                <div class="nosotros-texto">
+
+                    <h3>
+                        Líneas Dietéticas y Especiales
+                    </h3>
+
+                    <p>
+                        Sin azúcar, sin gluten y vegana. Adaptaciones
+                        modernas de nuestras recetas de antaño que
+                        sustituyen ingredientes sin perder la textura
+                        esponjosa y el sabor característico de 50 años
+                        de tradición.
+                    </p>
+
+                </div>
+
+                <img
+                    class="FotoNosotros"
+                    src="./images/Cheesecake_SinAzúcar.jpg"
+                    alt="Cheesecake sin azúcar"
+                >
+
+            </section>
+
+
+            <!-- =====================================
+                 TÍTULO MISIÓN Y VISIÓN
+                 ===================================== -->
+
+            <h2 class="titulo-seccion">
+                Misión y Visión
+            </h2>
+
+
+            <!-- =====================================
+                 MISIÓN Y VISIÓN
+                 ===================================== -->
+
+            <section class="nosotros-contenido">
+
+                <div class="nosotros-texto">
+
+                    <h3>Misión</h3>
+
+                    <p>
+                        Ofrecer una experiencia dulce y memorable a nuestros
+                        clientes, proporcionando tortas y productos de
+                        repostería de alta calidad para todas las ocasiones,
+                        mientras celebramos nuestras raíces históricas y
+                        fomentamos la creatividad en la repostería.
+                    </p>
+
+                    <h3>Visión</h3>
+
+                    <p>
+                        Convertirnos en la tienda online líder de productos
+                        de repostería en Chile, conocida por nuestra
+                        innovación, calidad y el impacto positivo en la
+                        comunidad, especialmente en la formación de nuevos
+                        talentos en gastronomía.
+                    </p>
+
+                </div>
+
+                <img
+                    class="FotoNosotros"
+                    src="./images/misión_visión.jpg"
+                    alt="Misión y Visión de Pastelería Mil Sabores"
+                >
+
+            </section>
+
+
+        </div>
+
+    </section>
+
+</main>
+    <script src="./validaciones.js"></script>
+    <script src="./usuarios.js"></script>
+    <script src="./carrito.js"></script>
 </body>
 </html>
